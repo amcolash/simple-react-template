@@ -1,13 +1,16 @@
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { AppPage } from 'pages/AppPage';
+const AppPage = lazy(async () => ({ default: (await import('pages/AppPage')).AppPage }));
 
 export function Router() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="*" element={<AppPage />} />
-      </Routes>
+      <Suspense fallback={<span>Loading...</span>}>
+        <Routes>
+          <Route path="*" element={<AppPage />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

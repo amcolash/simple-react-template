@@ -26,9 +26,10 @@
 
     "paths": {
       "components/*": ["./src/components/*"],
+      "contexts/*": ["./src/contexts/*"],
       "hooks/*": ["./src/hooks/*"],
-      "utilities/*": ["./src/utilities/*"],
-      "pages/*": ["./src/pages/*"]
+      "pages/*": ["./src/pages/*"],
+      "utilities/*": ["./src/utilities/*"]
     }
   },
   "include": ["src"]
