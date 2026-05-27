@@ -5,6 +5,7 @@ This is a very basic react template to scaffold a new project. It includes the f
 ## Runtime
 
 - React
+- React Router
 - Tailwind CSS
 
 ## Development
